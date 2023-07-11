@@ -15,7 +15,7 @@ type authResponse struct {
 
 func main() {
     router := gin.Default()
-    router.GET("/secretKey", getSecretKeyByFile)
+    router.GET("/secretKey/:file", getSecretKeyByFile)
 
     router.Run("localhost:8080")
 }
